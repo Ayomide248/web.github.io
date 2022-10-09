@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style type="text/css">
+  *{margin:0;} 
+#popUp{margin-top:35%;
+margin-left:15%;
+display:none;
+animation:laugh 2s }
+
+@keyframes laugh{0%{margin-top:75%;}
+100%{margin-top:25%;}
+}
+
+#close{
+width:25px;
+height:25px;
+font-size:40px;
+text-align:center;
+background-color:transparent;
+margin-left:75%;
+font-weight:600;
+display:block;
+border:#fff;
+cursor:pointer;}
+
+.all{
+width:240px;
+height:350px;
+background-color: skyblue;
+text-align:center;
+}
+
+.all h2{padding-top:20%;
+font-family:verdana;}
+
+#username,#password{margin-left:10%;
+height:20px;
+width:180px;}
+
+#submit{width:140px;
+height:25px;
+margin-left:10%;
+}
+
+#investor {
+  height: 100%;
+  width:0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+ overflow-x:hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+#investor a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#closeMenu{
+  position:absolute;
+  top: 0;
+  right: 25px;
+  font-size:0px;
+  cursor:pointer;
+ }
+ 
+
+#showMenu{font-size:50px;
+cursor:pointer;
+
+
+}
+
+#focus{
+width:100%;
+height:100vh;
+background-color:powderblue;
+}
+
+#focus p{
+position:fixed;
+top:30%;
+font-size:16px;
+text-align:center;
+font-weight:600;}
+
+#getStarted{
+position:fixed;
+top:40%;
+text-align:center;
+margin-left:25%;
+background-color:transparent;
+border:solid pink;
+cursor:pointer;}
+
+
+
+</style>
+<body>
+<div id="popUp">
+<button id="close">&times;</button>
+<div class="all">
+<h2>LOGIN</h2>
+<form>
+<table>
+<tr>
+<td>
+<input type="text" placeholder="Usersname" id="username">
+</td>
+</tr>
+<tr>
+<td>
+<input type="password" placeholder="Password" id="password">
+</td>
+</tr>
+<tr>
+<td>
+
+<input type="checkbox" checked="checked" id="checkedbox">Save Password 
+</td>
+</tr>
+<tr>
+<td>
+<button id="submit">LOGIN</button>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+<div id="focus">
+<div id="investor">
+<a id="closeMenu">&times;</a>
+<li><a href="#" onclick="alert('Please Login')">HOME</a></li>
+<li><a href="#" onclick="alert('Please Login')" >BUY DATABUNDLE</li></a>
+<li><a href="#" onclick="alert('Please Login')" >BUY RECHARGE CARD</a></li>
+<li><a href="#" onclick="alert('Please Login')" >BUY WAEC E-PIN</a></li>
+<li><a href="#" onclick="alert('Please Login')" >CONTACT</a></li>
+<li><a href="#" onclick="alert('Please Login')">ABOUT US</a></li>
+</div>
+<span id="showMenu">&#8801</span>
+<p>We sell cheap and affordadle data here also we do data bonus to those that buy more than 30 thousand Naira data bundle every months </p>
+<button id="getStarted">BUY YOUR DATA NOW</button>
+</div>
+<script type="text/javascript">
+var Started = document.getElementById("getStarted")
+var showMenu = document.getElementById("showMenu");
+var closeMenu = document.getElementById("closeMenu");
+var popUp = document.getElementById("popUp");
+var investor = document.getElementById("investor");
+var close = document.getElementById("close");
+Started.onclick = function(){
+popUp.style.display ="block";
+document.getElementById("focus").style.display = "none";
+}
+ close.onclick = function(){
+ popUp.style.display = "none";
+ document.getElementById("focus").style.display = "block";
+ }
+ showMenu.onclick = function(){
+ investor.style.width = "100%";
+ }
+ 
+ closeMenu.onclick = function(){
+ investor.style.width = "0";
+ 
+ }
+ var submit = document.getElementById("submit");
+ submit.onclick = function(){
+   var username = document.getElementById("username").value;  
+  var password = document.getElementById("password").value;
+  if(username=="Ayomide24" && password=="Quadri123"){
+  alert("login successfully");
+    window.location.replace("noname(2).html");
+     
+ }else{
+ 
+ alert("invalid details");}}
+
+</script>
+</body>
+</html>

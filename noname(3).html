@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title></title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style type="text/css">
+  *{margin:0;
+  } 
+body{background-color:powderblue;}
+
+#investor {
+height:100vh;
+  width:0%;
+  position: fixed;
+  z-index:6 ;
+  top: 0;
+  left: 0;
+  background-color: #111;
+ overflow-x:hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+#investor a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#closeMenu{
+  position:absolute;
+  top: 0;
+  right: 25px;
+  font-size:0px;
+  cursor:pointer;
+ }
+ 
+
+#showMenu{font-size:50px;
+cursor:pointer;
+
+
+}
+
+#focus{
+width:100%;
+height:100vh;
+background-color:powderblue;
+}
+
+
+ 
+ #MTN{
+ background-color:white;
+ width:150px;
+ height:200px;
+ margin:auto;
+ box-shadow:0 4px 8px 0 rgba(0,0,0,0.5);
+text-align:center;
+transition:0.7s;
+position:absolute;
+z-index:1; 
+backface-visibility:hidden;}
+
+ #MTN h3,#airtel h3{
+ padding-top:10px;}
+ 
+ .action{
+background-color:transparent;
+ width:150px;
+ height:200px;
+margin:auto;
+margin-top:30px;
+position:fixed;
+top:;}
+ 
+ #action-inner{
+ width:100%;
+ height:100;
+ position:relative;
+ }
+ 
+ #MTN p,#airtel p{
+color:purple; 
+ padding-top:30px;}
+ 
+ #hustle,#hola{
+ margin-top:30px;
+}
+
+
+#hustle:focus,#hola:focus{background-color:slateblue;
+transition:3s;}
+
+#MTN-plan{
+width:150px;
+height:200px;
+background-color:white;
+box-shadow:0 4px 8px 0 rgba(0,0,0,0.5);
+position:absolute;
+z-index:0;
+text-align:center;}
+
+#MTN-plan h3{
+padding-top:0px;
+text-align:center;
+}
+
+#MTN-plan a{
+display:block;
+text-decoration:none;
+list-style:none;}
+
+#MTN-plan li{
+list-style:none;
+padding-top:13px;}
+
+#long{margin:auto;
+margin-top:10px;}
+
+
+</style>
+<body>
+
+<div id="focus">
+<div id="investor">
+<a id="closeMenu">&times;</a>
+<li><a href="#" >HOME</a></li>
+<li><a href="#" >BUY DATABUNDLE</li></a>
+<li><a href="#" >BUY RECHARGE CARD</a></li>
+<li><a href="#" >BUY WAEC E-PIN</a></li>
+<li><a href="#" >CONTACT</a></li>
+<li><a href="#" >ABOUT US</a></li>
+</div>
+<span id="showMenu">&#8801</span>
+<h3>BUY DATA BUNDLE</h3>
+<div class="action">
+<div id="action-inner">
+<div id="MTN">
+<h3>MTN</h3>
+<p>Congratulations to all mtn users. Mtn data plan is the most cheapest among all network in nigeria </p>
+
+<button id="hustle">BUY NOW</button>
+</div>
+<div id="MTN-plan">
+<h3>MTN</h3>
+<li><a href="noname(4).html" >1GB FOR #300</a></li>
+<li><a href="noname(4).html" >2GB FOR #550</a></li>
+<li><a href="noname(4).html" >3GB FOR #800</a></li>
+<li><a href="noname(4).html" >5GB FOR #1300</a></li>
+<li><a href="noname(4).html" >10GB FOR #2000</a></li>
+
+<button id="long">BACK</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+<script type="text/javascript">
+
+var showMenu = document.getElementById("showMenu");
+var closeMenu = document.getElementById("closeMenu");
+
+ showMenu.onclick = function(){
+ investor.style.width = "100%";
+ }
+ 
+ closeMenu.onclick = function(){
+ investor.style.width = "0";
+ 
+ }
+ var MTN = document.getElementById("MTN");
+ var plan = document.getElementById("MTN-plan");
+var hustle = document.getElementById("hustle");
+
+hustle.onclick = function(){
+MTN.style.transform = "rotateY(180deg)";
+
+}
+
+var fixed = document.getElementById("fixed");
+fixed.onclick = function(){
+document.getElementById("airtel").style.display ="none";
+
+
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
